@@ -1,0 +1,16 @@
+.NotAdmin h1, .NotAdmin a {
+  font-size: 30px;
+	text-align: center;
+    display: block;
+    color: black;
+
+}
+
+.NotAdmin{
+  background-image: url(../../../assets/images/page\ not\ found.gif);
+  background-size:contain;
+  width: 1000px;
+  height: 500px;
+  margin: 100px, auto;
+  display: block;
+}

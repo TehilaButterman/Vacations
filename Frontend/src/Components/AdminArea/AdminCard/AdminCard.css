@@ -1,0 +1,12 @@
+.edit, .delete{
+   width: 55px;
+   height: 55px;
+}
+.edit{
+   margin-left: 20%;
+   color: black;
+}
+.delete{
+   margin-left: 40%;
+   color: black;
+}

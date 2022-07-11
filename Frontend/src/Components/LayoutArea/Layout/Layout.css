@@ -1,0 +1,360 @@
+ @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Source+Sans+Pro&display=swap');
+:root {
+  --primary-font:'Playfair Display', serif;
+  --secondary-font:'Source Sans Pro', sans-serif;
+  --light-bg:white;
+  --dark-bg:#1a1a1a;
+  --grey-bg: #2c2c2c;
+  --highlight:#f2ea9b;
+  --primary-text:#060606;
+  --secondary-text:#e1ddec;
+  --grey-text: #c9c9c9;
+  --frame-box-shadow: 1px 1px 20px 0px rgba(87,83,83,0.75);
+}
+
+body {
+  height: 100%;
+  width: 98%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg);
+  background-size: cover;
+
+}
+
+hgroup
+{
+  font-family: var(--primary-font);
+  font-size:40px;
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 1.5;
+  color:var(--primary-text);
+  margin: 0 auto;
+  text-align: center;
+}
+p
+{
+  font-family: var(--secondary-font);
+  font-size:40px;
+  font-weight: 600;
+  color: var(--secondary-text);
+  padding: 5px;
+}
+.frame {
+  height: 130px;
+  width: 80vw;
+  border-radius: 3px;
+  background: var(--light-bg);
+  box-shadow: var(--frame-box-shadow);
+  overflow-x:hidden;
+  overflow-y: auto;
+  margin: 0 auto;
+}
+@media screen and (max-width: 600px)
+{
+  .frame {
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+  .title {
+    min-width: 100%;
+  }
+  .subtitle {
+    width: 75%;
+  }
+  #medium-logo {
+    max-width: 50px;
+  }
+  .blog-img {
+  max-inline-size: 35vmin;
+  max-block-size: 35vmin;
+  }
+  .blog-content h {
+  font-size: 3vw;
+  }
+  .cards-wrapper {
+    flex-direction: column !important;
+  }
+  .card {
+    width: 80vw;
+  }
+}
+header
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  height: 130px;
+  position: sticky;
+}
+.right, .left {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.right{
+  width: 25%;
+}
+#subtitle1{
+    color: #2c2c2c;
+    margin: 10px auto;
+}
+
+.subtitle{
+   margin: 0 auto; 
+}
+.title{
+    margin: 0 auto;
+}
+a,
+.logout {
+  font-family: var(--secondary-font);
+  color: var(--primary-text);
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 3px;
+  text-transform: capitalize;
+  text-decoration: none;
+  underline: none;
+  padding: 18px;
+  cursor:pointer;
+  transition: all .5s ease;
+  display: inline-block;
+  position: relative;
+  line-height: 0.4;
+  margin-left: 8%;
+}
+
+article{
+    margin: 0 auto;
+}
+a:after,
+.logout:after
+{
+  position: absolute;
+  content: "";
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left:0;
+  background: var(--highlight);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+a:hover,
+.logout:hover
+{
+  font-size:25px;
+}
+a:hover:after,
+.logout:hover:after
+{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+a:nth-child(1)
+{
+  margin-left: 5px;
+}
+#underline
+{
+  border-bottom: 10px var(--highlight) solid;
+  display: inline-block;
+  line-height: 0.4;
+}
+#sign-in{
+  font-family: var(--secondary-font);
+  text-transform: capitalize;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  margin: 3px;
+  font-weight: 600;
+  transition: .05s;
+}
+#sign-in {
+  display: inline-block;
+  position: relative;
+}
+#sign-in:after
+{
+  position: absolute;
+  content: "";
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left:0;
+  background: var(--dark-bg);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+#sign-in:hover:after
+{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+#sign-in:hover {
+  transform: scale(1.1);
+}
+#sign-up:hover {
+  font-size: 35px;
+}
+article
+{
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height:580px;
+}
+.title, .subtitle, .hero-img
+{
+  text-align: center;
+  margin: 0 auto;
+}
+.title
+{
+  width: 75%;
+}
+.subtitle
+{
+  width: 60%;
+  padding: 10px;
+}
+.hero-img {
+  width: 85%;
+  height: 250px;
+  background-image: url(../../../assets/images/ben-navis.jpeg);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+.blog-wrapper {
+  margin-top: 5vh;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.blog-post-wrapper {
+  width: 100%;
+  height: 40vmin;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.blog-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 40vmin);
+  height: 100%;
+}
+.blog-content h {
+  font-size: 3vmin;
+  margin-left: 10px;
+  text-align: right;
+}
+.blog-img {
+  inline-size: 40vmin;
+  block-size: 40vmin;
+}
+#blog-img {
+  height: 100%;
+  width: 100%;
+}
+#blog-img::after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 100px;
+  width: 150px;
+  background: var(--dark-bg);
+}
+.services {
+  background-attachment: fixed;
+  margin-top: 5vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+  background: var(--dark-bg);
+  margin: 0 auto;
+}
+.service-header {
+  padding: 30px;
+  text-align: center;
+}
+h1, h2 {
+  font-size: 60px;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-family: var(--secondary-font);
+  color: var(--light-bg);
+}
+h2 {
+  font-size: 1.3rem;
+  color: var(--grey-text);
+}
+.card p {
+  font-weight: 500;
+  font-size:20px;
+  line-height: 1.7rem;
+  margin-top: 2px;
+  padding: 5px;
+}
+.card img{
+  position:sticky;
+  margin-top: -60px;
+  width: 350px !important;
+  height: 190px;
+}
+.cards-wrapper {
+  margin-top: 5vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  background: var(--grey-bg);
+  height: 500px;
+  width: 350px;
+  margin: 1px;
+  margin-top: 20px;
+  padding: 5px;
+}
+
+.icon {
+  inline-size: 20vmin;
+  block-size: 20vmin;
+  line-height: 160px;
+}
+
+footer {
+  position:static;
+  width: 100%;
+  left: 0;
+  display: block;
+}

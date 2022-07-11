@@ -1,0 +1,13 @@
+.left img{
+    width: 180px;
+    height: 90px;
+    display: inline;
+}
+
+.right{
+  display: inline;
+}
+.right > h3{
+    white-space: nowrap;
+    font-size: 20px;
+}
