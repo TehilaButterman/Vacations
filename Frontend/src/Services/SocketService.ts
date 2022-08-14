@@ -25,7 +25,7 @@ class SocketService {
     };
 
     public connect(): void {
-        this.socket = io("http://localhost:3004")
+        this.socket = io("http://localhost:3001")
         this.socket.emit('connection')
         this.listen()
     };
