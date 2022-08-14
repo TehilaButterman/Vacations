@@ -19,6 +19,7 @@ function Login(): JSX.Element {
             notifyService.success('Welcome! You have been successfully logged in!');
             const isAdmin = authService.isAdmin();
             if (isAdmin) {
+                socketService.connect()
                 navigate('/admin-page')
             } else {
                 const allVacations = await vacationService.fetchAllVacations();
